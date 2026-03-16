@@ -11,7 +11,8 @@ not_found_handling = "single-page-application"
 [[d1_databases]]
 binding = "DB"
 database_name = "d1table"
-database_id = "cfc5f9b0-f65d-429d-941c-d3b84d0a4de0"
+# 执行 `wrangler d1 create d1table` 后将输出的 database_id 填入此处
+database_id = "YOUR_DATABASE_ID"
 
 [vars]
 ENVIRONMENT = "production"
