@@ -1,0 +1,24 @@
+name = "d1table"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "d1table"
+database_id = "cfc5f9b0-f65d-429d-941c-d3b84d0a4de0"
+
+[vars]
+ENVIRONMENT = "production"
+
+# ADMIN_KEY 请通过 wrangler secret put ADMIN_KEY 设置，不要写在此文件中
+
+# 自定义域名路由（可选）：绑定到自己的域名时取消注释并修改
+# [[routes]]
+# pattern = "your-domain.com/*"
+# zone_name = "your-domain.com"
