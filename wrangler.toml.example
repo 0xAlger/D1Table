@@ -11,15 +11,21 @@ not_found_handling = "single-page-application"
 [[d1_databases]]
 binding = "DB"
 database_name = "d1table"
-# 执行 `wrangler d1 create d1table` 后将输出的 database_id 填入此处
 database_id = "YOUR_DATABASE_ID"
+
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "d1table-files"
 
 [vars]
 ENVIRONMENT = "production"
 
-# ADMIN_KEY 请通过 wrangler secret put ADMIN_KEY 设置，不要写在此文件中
+# Secrets (set via `wrangler secret put`):
+#   GOOGLE_CLIENT_ID
+#   GOOGLE_CLIENT_SECRET
+#   SESSION_SECRET
 
-# 自定义域名路由（可选）：绑定到自己的域名时取消注释并修改
+# Custom domain routing (optional): uncomment and edit to bind to your own domain
 # [[routes]]
 # pattern = "your-domain.com/*"
 # zone_name = "your-domain.com"
